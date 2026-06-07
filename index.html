@@ -35,7 +35,7 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
     }
 
     h1 {
@@ -45,8 +45,7 @@
 
     h2 {
       font-size: 1.15rem;
-      margin-top: 28px;
-      margin-bottom: 10px;
+      margin: 28px 0 10px;
     }
 
     p {
@@ -88,7 +87,7 @@
     <div class="card">
       <h1>Datenschutzerklärung</h1>
       <p class="muted">
-        Gültig für die App Finanzplaner. Stand: Mai 2026.
+        Gültig für die App Finanzplaner. Stand: Juni 2026.
       </p>
 
       <h2>1. Verantwortliche Person</h2>
@@ -104,66 +103,123 @@
       <h2>2. Zweck der App</h2>
       <p>
         Finanzplaner ist eine App zur Verwaltung persönlicher Finanzen. Nutzer können
-        Einnahmen, Ausgaben, Kategorien, Budgets, Verträge, Kredite, Sparziele und
-        Belege erfassen und auswerten.
+        Einnahmen, Ausgaben, Kategorien, Budgets, Verträge, Kredite, Daueraufträge,
+        Sparziele und Belege erfassen und auswerten. Zusätzlich steht ein optionaler
+        KI-Finanzassistent auf Basis von Google Gemini zur Verfügung.
       </p>
 
       <h2>3. Welche Daten verarbeitet werden</h2>
       <p>
-        Je nach Nutzung der App können insbesondere folgende Daten verarbeitet oder gespeichert werden:
+        Je nach Nutzung der App können insbesondere folgende Daten verarbeitet oder
+        gespeichert werden:
       </p>
       <ul>
-        <li>Eingegebene Finanzdaten wie Einnahmen, Ausgaben, Beträge, Titel, Daten und Kategorien.</li>
-        <li>Informationen zu Budgets, Verträgen, Krediten und Sparzielen.</li>
-        <li>Belegbilder oder importierte Dokumente, sofern du diese selbst in der App speicherst.</li>
-        <li>Technische Daten, die für die Synchronisation über Apple-Dienste erforderlich sind.</li>
+        <li>Finanzdaten wie Einnahmen, Ausgaben, Beträge, Titel, Daten und Kategorien.</li>
+        <li>Informationen zu Budgets, Verträgen, Krediten, Daueraufträgen und Sparzielen.</li>
+        <li>Belegbilder oder importierte Dokumente, sofern du diese in der App verwendest.</li>
+        <li>Chatnachrichten und Bilder, die du an den KI-Finanzassistenten sendest.</li>
+        <li>Technische Daten, die für iCloud und andere verwendete Dienste erforderlich sind.</li>
       </ul>
 
-      <h2>4. Wo die Daten gespeichert werden</h2>
+      <h2>4. Lokale Speicherung und iCloud</h2>
       <p>
-        Die von dir eingegebenen Daten werden in erster Linie zur Nutzung der App verarbeitet.
-        Wenn die iCloud-Synchronisation in der App aktiviert ist, können Daten über Apple iCloud
-        zwischen deinen Apple-Geräten synchronisiert werden.
+        Deine Finanzdaten werden grundsätzlich lokal auf deinem Gerät verarbeitet.
+        Wenn du die iCloud-Synchronisation verwendest, können deine Daten über Apple
+        iCloud zwischen deinen Apple-Geräten synchronisiert werden. Für diese Verarbeitung
+        gelten zusätzlich die Datenschutzbestimmungen von Apple.
       </p>
 
-      <h2>5. Weitergabe an Dritte</h2>
+      <h2>5. KI-Finanzassistent und Google Gemini</h2>
       <p>
-        Es erfolgt kein Verkauf deiner personenbezogenen Daten. Eine Weitergabe erfolgt nur,
-        soweit sie technisch für die von dir aktiv genutzten Apple-Dienste erforderlich ist,
-        zum Beispiel für die iCloud-Synchronisation über Apple.
+        Der KI-Finanzassistent verwendet Google Gemini, derzeit Gemini 2.5 Flash.
+        Die Nutzung ist freiwillig. Erst wenn du eine Anfrage sendest, werden die für
+        die Bearbeitung erforderlichen Inhalte an den KI-Dienst übertragen.
+      </p>
+      <p>
+        Die Übertragung erfolgt über einen technischen Vermittlungsdienst auf Basis
+        von Cloudflare Workers. Dabei können je nach Anfrage folgende Inhalte
+        übermittelt werden:
+      </p>
+      <ul>
+        <li>Deine Nachricht und der bisherige Chatverlauf.</li>
+        <li>Buchungstitel, Beträge, Daten und Kategorien.</li>
+        <li>Zusammenfassungen deiner Einnahmen und Ausgaben.</li>
+        <li>Informationen zu Budgets, Verträgen, Krediten, Daueraufträgen und Sparzielen.</li>
+        <li>Beleg- oder Dokumentbilder, die du selbst für eine KI-Anfrage auswählst.</li>
+      </ul>
+      <p>
+        Die App übermittelt dabei nicht absichtlich deinen Namen, deine E-Mail-Adresse
+        oder eine Benutzerkontonummer. Die übertragenen Inhalte können dennoch
+        personenbezogene oder sensible Finanzinformationen enthalten. Gib daher keine
+        unnötigen personenbezogenen oder vertraulichen Informationen in den KI-Chat ein.
+      </p>
+      <p>
+        Von unserer Seite werden die an den KI-Assistenten gesendeten Anfragen und
+        Antworten nicht in einer eigenen Datenbank dauerhaft gespeichert. Eine technisch
+        erforderliche vorübergehende Verarbeitung oder Protokollierung durch Cloudflare
+        oder Google kann jedoch stattfinden.
+      </p>
+      <p>
+        Weitere Informationen findest du in den
+        <a href="https://ai.google.dev/gemini-api/terms?hl=de" target="_blank" rel="noopener noreferrer">
+          Bedingungen der Gemini API
+        </a>,
+        der
+        <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">
+          Datenschutzerklärung von Google
+        </a>
+        und der
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">
+          Datenschutzerklärung von Cloudflare
+        </a>.
       </p>
 
-      <h2>6. Zweck der Verarbeitung</h2>
+      <h2>6. Weitergabe an Dritte</h2>
       <p>
-        Die Verarbeitung erfolgt ausschließlich, um die Funktionen der App bereitzustellen,
-        insbesondere zur Erfassung, Anzeige, Auswertung und Synchronisation deiner Finanzdaten.
+        Es erfolgt kein Verkauf deiner personenbezogenen Daten. Daten werden nur
+        weitergegeben, soweit dies für eine von dir verwendete Funktion technisch
+        erforderlich ist. Dazu gehören Apple für die optionale iCloud-Synchronisation
+        sowie Cloudflare und Google für den freiwillig verwendeten KI-Finanzassistenten.
       </p>
 
-      <h2>7. Aufbewahrung und Löschung</h2>
+      <h2>7. Zweck der Verarbeitung</h2>
       <p>
-        Deine Daten bleiben grundsätzlich so lange gespeichert, wie du sie in der App nutzt
-        oder aufbewahrst. Wenn du Daten in der App löschst oder die App entfernst, werden lokal
-        gespeicherte Daten im Rahmen der Systemfunktionen deines Geräts entfernt. Für über iCloud
-        synchronisierte Daten gelten zusätzlich die Regelungen von Apple.
+        Die Verarbeitung erfolgt zur Bereitstellung der App-Funktionen, insbesondere
+        zur Erfassung, Anzeige, Auswertung und Synchronisation deiner Finanzdaten sowie
+        zur Bearbeitung freiwillig gestellter Anfragen an den KI-Finanzassistenten.
       </p>
 
-      <h2>8. Deine Rechte</h2>
+      <h2>8. Aufbewahrung und Löschung</h2>
       <p>
-        Du kannst jederzeit Auskunft zu personenbezogenen Daten anfragen, die Berichtigung
-        oder Löschung verlangen und dich bei Fragen zum Datenschutz an die oben genannte
-        Kontaktadresse wenden.
+        Deine lokal gespeicherten Daten bleiben grundsätzlich so lange erhalten, wie
+        du sie in der App nutzt oder aufbewahrst. Wenn du Daten löschst oder die App
+        entfernst, werden lokal gespeicherte Daten im Rahmen der Systemfunktionen deines
+        Geräts entfernt.
+      </p>
+      <p>
+        Für über iCloud synchronisierte Daten gelten zusätzlich die Regelungen von Apple.
+        Für an den KI-Dienst übermittelte Inhalte gelten außerdem die Aufbewahrungs- und
+        Löschregelungen von Google und Cloudflare.
       </p>
 
-      <h2>9. Supportanfragen</h2>
+      <h2>9. Deine Rechte</h2>
       <p>
-        Wenn du per E-Mail Kontakt aufnimmst, werden die von dir übermittelten Angaben ausschließlich
-        zur Bearbeitung deiner Anfrage verwendet.
+        Du kannst jederzeit Auskunft zu personenbezogenen Daten anfragen, ihre
+        Berichtigung oder Löschung verlangen und dich bei Fragen zum Datenschutz an
+        die oben genannte Kontaktadresse wenden.
       </p>
 
-      <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+      <h2>10. Supportanfragen</h2>
       <p>
-        Diese Datenschutzerklärung kann aktualisiert werden, wenn sich die App-Funktionen oder
-        rechtliche Anforderungen ändern. Maßgeblich ist die jeweils auf dieser Seite veröffentlichte Fassung.
+        Wenn du per E-Mail Kontakt aufnimmst, werden die von dir übermittelten Angaben
+        ausschließlich zur Bearbeitung deiner Anfrage verwendet.
+      </p>
+
+      <h2>11. Änderungen dieser Datenschutzerklärung</h2>
+      <p>
+        Diese Datenschutzerklärung kann aktualisiert werden, wenn sich die App-Funktionen,
+        eingesetzte Dienstleister oder rechtliche Anforderungen ändern. Maßgeblich ist
+        die jeweils auf dieser Seite veröffentlichte Fassung.
       </p>
     </div>
   </div>
